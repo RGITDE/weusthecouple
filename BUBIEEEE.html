@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Journey</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #87CEEB, #FFFACD); /* Blue to yellow gradient */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 50px;
+            background-color: rgba(255, 255, 255, 0.8);
+            position: relative;
+        }
+        header h1 {
+            font-size: 48px;
+            color: #4A90E2;
+            display: inline-block;
+            position: relative;
+        }
+        header h1::before, header h1::after {
+            content: '';
+            background: url('flower.png') no-repeat;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+        }
+        header h1::before {
+            left: -60px;
+            top: 0;
+        }
+        header h1::after {
+            right: -60px;
+            top: 0;
+        }
+        section {
+            margin: 40px auto;
+            max-width: 1000px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #FFD700;
+            text-align: center;
+        }
+        .photos, .videos {
+            display: none; /* Initially hidden */
+            justify-content: center; /* Center the contents */
+            flex-wrap: wrap;
+        }
+        .photo-container {
+            text-align: center; /* Center text below each image */
+            margin: 15px; /* Space between photos */
+        }
+        .photos img, .videos video {
+            width: 45%;
+            border-radius: 10px;
+        }
+        .caption {
+            font-size: 14px;
+            color: #555;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4A90E2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #357ABD;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        function togglePhotos() {
+            var photoSection = document.getElementById("photo-section");
+            if (photoSection.style.display === "none") {
+                photoSection.style.display = "flex";
+            } else {
+                photoSection.style.display = "none";
+            }
+        }
+
+        function toggleVideos() {
+            var videoSection = document.getElementById("video-section");
+            if (videoSection.style.display === "none") {
+                videoSection.style.display = "flex";
+            } else {
+                videoSection.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Our Journey</h1>
+    <p>Welcome to our story, filled with love, memories, and dreams for the future.</p>
+</header>
+
+<section>
+    <h2>About Us</h2>
+    <p>We are two souls brought together by fate, sharing laughter, love, and endless adventures. Here's a little bit about us:</p>
+    <ul>
+        <li><strong>Hobbies:</strong> Traveling, cooking, photography, hiking, gaming, watching movies.</li>
+        <li><strong>Likes:</strong> Sunsets, beach walks, exploring new places, enjoying good food, deep conversations.</li>
+        <li><strong>Dreams:</strong> Building a future together, traveling the world, starting a family, creating a cozy home.</li>
+        <li><strong>Hopes for the Future:</strong> To always support and cherish each other, and grow old together.</li>
+    </ul>
+</section>
+
+<!-- Button to show/hide photos -->
+<section>
+    <h2>Our Favorite Moments</h2>
+    <button onclick="togglePhotos()">Show/Hide Photos</button>
+    <div id="photo-section" class="photos">
+        <div class="photo-container">
+            <img src="COPY JER.jpg" alt="Photo of us together">
+            <div class="caption">A beautiful day together</div>
+        </div>
+        <div class="photo-container">
+            <img src="COPY JER 2.jpg" alt="Another moment we cherish">
+            <div class="caption">Exploring new places</div>
+        </div>
+        <div class="photo-container">
+            <img src="COPY JER 3.jpg" alt="Fun trip memory">
+            <div class="caption">Memories from our fun trip</div>
+        </div>
+        <div class="photo-container">
+            <img src="COPY JER 4.jpg" alt="Candid shot of us laughing">
+            <div class="caption">A candid moment of joy</div>
+        </div>
+    </div>
+</section>
+
+<!-- Button to show/hide videos -->
+<section>
+    <h2>Video Memories</h2>
+    <button onclick="toggleVideos()">Show/Hide Videos</button>
+    <div id="video-section" class="videos">
+        <video controls>
+            <source src="video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Our Journey. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
